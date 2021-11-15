@@ -1,0 +1,23 @@
+# IDEA
+**/.idea/
+**/.idea/workspace.xml
+**/*.iml
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Compile folder
+**/target/*
+
+# log output
+**/logs/
+.DS_Store
+**/.DS_Store
+
+#pom 备份文件
+**/pom.xml.versionsBackup
+**/java2thrift
+**/tmp
+**/target
