@@ -1,6 +1,6 @@
 package com.npc.algorithms.list;
 
-import com.npc.algorithms.Util;
+import com.npc.algorithms.util.Util;
 
 public class RemoveElement {
 

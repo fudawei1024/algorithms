@@ -1,6 +1,6 @@
 package com.npc.algorithms.string;
 
-import com.npc.algorithms.Util;
+import com.npc.algorithms.util.Util;
 
 public class ReverseString {
     public static void main(String[] args) {

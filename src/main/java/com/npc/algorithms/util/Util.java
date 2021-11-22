@@ -1,4 +1,4 @@
-package com.npc.algorithms;
+package com.npc.algorithms.util;
 
 import com.npc.algorithms.list.ListNode;
 
