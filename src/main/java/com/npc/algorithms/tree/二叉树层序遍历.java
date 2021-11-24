@@ -4,7 +4,7 @@ import com.npc.algorithms.util.TreeOperation;
 
 import java.util.*;
 
-public class IteratorLevel {
+public class 二叉树层序遍历 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);

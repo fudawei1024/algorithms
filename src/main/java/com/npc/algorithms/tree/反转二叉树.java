@@ -3,7 +3,7 @@ package com.npc.algorithms.tree;
 import com.npc.algorithms.util.TreeOperation;
 
 
-public class InvertTree {
+public class 反转二叉树 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);

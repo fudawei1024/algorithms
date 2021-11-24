@@ -1,7 +1,5 @@
 package com.npc.algorithms.tree;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
-
 /**
  * @projectName: algorithms
  * @package: com.npc.algorithms.tree

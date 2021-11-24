@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LargestValues {
+public class 二叉树的右视图 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);
@@ -35,12 +35,8 @@ public class LargestValues {
         que.offer(root);
         while(!que.isEmpty()) {
             int length = que.size();
-            int max = 0;
             while (length > 0) {
                 TreeNode node = que.poll();
-                if (max < node.val) {
-                    max = node.val;
-                }
                 if (node.left != null) {
                     que.offer(node.left);
                 }
@@ -48,8 +44,10 @@ public class LargestValues {
                     que.offer(node.right);
                 }
                 length --;
+                if (length == 0) {
+                    resList.add(node.val);
+                }
             }
-            resList.add(max);
         }
         return resList;
     }

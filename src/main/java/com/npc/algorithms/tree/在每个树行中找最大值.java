@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Connect {
+public class 在每个树行中找最大值 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);
@@ -19,42 +19,38 @@ public class Connect {
 
         TreeOperation.show(treeNode);
 
-        TreeNode result = connect(treeNode);
-
-       TreeOperation.show(treeNode);
+        List<Integer> datas = rightSideView(treeNode);
+        datas.forEach(item -> {
+            System.out.print(item + "  ");
+        });
     }
 
-    private static TreeNode connect(TreeNode root) {
+    private static List<Integer> rightSideView(TreeNode root) {
+        List<Integer> resList = new ArrayList<>();
         if (root == null) {
-            return root;
+            return resList;
         }
 
         Queue<TreeNode> que = new LinkedList<>();
         que.offer(root);
         while(!que.isEmpty()) {
-            int size = que.size();
-
-            TreeNode pre = null;
-            int count = 0;
-            while (size > 0) {
-                count++;
+            int length = que.size();
+            int max = 0;
+            while (length > 0) {
                 TreeNode node = que.poll();
-
+                if (max < node.val) {
+                    max = node.val;
+                }
                 if (node.left != null) {
                     que.offer(node.left);
                 }
                 if (node.right != null) {
                     que.offer(node.right);
                 }
-                if (count == 1) {
-                        pre = node;
-                } else {
-                    pre.next = node;
-                    pre = pre.next;
-                }
-                size --;
+                length --;
             }
+            resList.add(max);
         }
-        return root;
+        return resList;
     }
 }

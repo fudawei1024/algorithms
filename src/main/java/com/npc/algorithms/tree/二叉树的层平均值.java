@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class RightSideView {
+public class 二叉树的层平均值 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);
@@ -19,24 +19,29 @@ public class RightSideView {
 
         TreeOperation.show(treeNode);
 
-        List<Integer> datas = rightSideView(treeNode);
+        List<Double> datas = averageOfLevels(treeNode);
         datas.forEach(item -> {
             System.out.print(item + "  ");
         });
     }
 
-    private static List<Integer> rightSideView(TreeNode root) {
-        List<Integer> resList = new ArrayList<>();
+    private static List<Double> averageOfLevels(TreeNode root) {
+        List<Double> resList = new ArrayList<>();
         if (root == null) {
             return resList;
         }
 
         Queue<TreeNode> que = new LinkedList<>();
         que.offer(root);
+
         while(!que.isEmpty()) {
             int length = que.size();
+            Double sum = 0.0;
+            int count = 0;
             while (length > 0) {
                 TreeNode node = que.poll();
+                sum += node.val * 1.0;
+                count ++;
                 if (node.left != null) {
                     que.offer(node.left);
                 }
@@ -44,10 +49,8 @@ public class RightSideView {
                     que.offer(node.right);
                 }
                 length --;
-                if (length == 0) {
-                    resList.add(node.val);
-                }
             }
+            resList.add(sum / count);
         }
         return resList;
     }

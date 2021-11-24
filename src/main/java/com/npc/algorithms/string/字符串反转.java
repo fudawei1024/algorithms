@@ -2,7 +2,7 @@ package com.npc.algorithms.string;
 
 import com.npc.algorithms.util.Util;
 
-public class ReverseString {
+public class 字符串反转 {
     public static void main(String[] args) {
         char[] str = "abcdefg".toCharArray();
         Util.p(str);

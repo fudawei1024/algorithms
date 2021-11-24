@@ -4,7 +4,7 @@ import com.npc.algorithms.util.TreeOperation;
 
 import java.util.*;
 
-public class Iterator {
+public class 二叉树迭代遍历 {
 
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
@@ -17,7 +17,7 @@ public class Iterator {
 
         TreeOperation.show(treeNode);
 
-        List<Integer> datas = preorderTraversal(treeNode);
+        List<Integer> datas = midLoop(treeNode);
         datas.forEach(item -> {
             System.out.print(item + "  ");
         });
@@ -119,5 +119,36 @@ public class Iterator {
             }
         }
         return result;
+    }
+
+    public static List<Integer> midLoop(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.peek();
+            if (node != null) {
+                stack.pop();
+                if (node.right != null) {
+                    stack.push(node.right);
+                }
+                stack.push(node);
+                stack.push(null);
+                if (node.left != null) {
+                    stack.push(node.left);
+                }
+
+            } else {
+                stack.pop();
+                TreeNode cnode = stack.peek();
+                stack.pop();
+                result.add(cnode.val);
+            }
+        }
+        return  result;
     }
 }

@@ -2,52 +2,59 @@ package com.npc.algorithms.tree;
 
 import com.npc.algorithms.util.TreeOperation;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
-public class MinDepth {
+public class 填充每个节点的下一个右侧节点指针 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);
         treeNode.right = new TreeNode(16);
+        treeNode.left.left = new TreeNode(3);
+        treeNode.left.right = new TreeNode(9);
         treeNode.right.left = new TreeNode(14);
         treeNode.right.right = new TreeNode(19);
-        treeNode.right.left.left = new TreeNode(14);
-        treeNode.right.left.left.left = new TreeNode(14);
 
         TreeOperation.show(treeNode);
 
-        System.out.println(minDepth(treeNode));
-        System.out.println(minDepth(null));
+        TreeNode result = connect(treeNode);
+
+       TreeOperation.show(treeNode);
     }
 
-    private static Integer minDepth(TreeNode root) {
-        int depth = 0;
+    private static TreeNode connect(TreeNode root) {
         if (root == null) {
-            return depth;
+            return root;
         }
 
         Queue<TreeNode> que = new LinkedList<>();
         que.offer(root);
-
-        while (!que.isEmpty()) {
+        while(!que.isEmpty()) {
             int size = que.size();
-            depth++;
+
+            TreeNode pre = null;
+            int count = 0;
             while (size > 0) {
+                count++;
                 TreeNode node = que.poll();
+
                 if (node.left != null) {
                     que.offer(node.left);
                 }
-                if (node.right!= null) {
+                if (node.right != null) {
                     que.offer(node.right);
                 }
-                if (node.left == null && node.right == null) {
-                   return depth;
+                if (count == 1) {
+                        pre = node;
+                } else {
+                    pre.next = node;
+                    pre = pre.next;
                 }
-                size--;
+                size --;
             }
         }
-        return depth;
+        return root;
     }
-
 }

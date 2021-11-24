@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LevelOrder {
+public class N叉树的层序遍历 {
 
     public static void main(String[] args) {
         Node node = new Node(1);
