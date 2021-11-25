@@ -1,6 +1,6 @@
 package com.npc.algorithms.list;
 
-public class DetectCycle {
+public class 单项链表是否有环如果有环返回环的入口 {
 
     public static ListNode detectCycle(ListNode head) {
         ListNode slow = head;
