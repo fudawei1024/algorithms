@@ -5,7 +5,7 @@ import com.npc.algorithms.util.TreeOperation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class 二叉树的所有路径 {
+public class 二叉树的所有路径递归 {
     public static void main(String[] args) {
         TreeNode treeNode = new TreeNode(10);
         treeNode.left = new TreeNode(6);
