@@ -1,12 +1,6 @@
 package com.npc.algorithms.tree;
 
 import com.npc.algorithms.util.TreeOperation;
-import javafx.util.Pair;
-import sun.lwawt.macosx.CSystemTray;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 public class 路径总和递归 {
     public static void main(String[] args) {
@@ -25,33 +19,14 @@ public class 路径总和递归 {
         System.out.println(traversal(treeNode, 68));
     }
 
-    private static boolean traversal(TreeNode root, int targetsum) {
-        if (root == null) return false;
-        Queue<TreeNode> que1 = new LinkedList<>();
-        Queue<Integer> que2 = new LinkedList<>();
-        que1.offer(root);
-        que2.offer(root.val);
-        while (!que1.isEmpty()) {
-            int size = que1.size();
-            while (size -- > 0) {
-                TreeNode node = que1.poll();
-                System.out.print(node.val + "  ");
-                int sum = que2.poll();
-                // 如果该节点是叶子节点了，同时该节点的路径数值等于sum，那么就返回true
-                if (node.left == null && node.right == null && sum == targetsum) return true;
-                // 左节点，压进去一个节点的时候，将该节点的路径数值也记录下来
-                if (node.left != null) {
-                    que1.offer(node.left);
-                    que2.offer(sum + node.left.val);
-                }
-                // 右节点，压进去一个节点的时候，将该节点的路径数值也记录下来
-                if (node.right != null) {
-                    que1.offer(node.right);
-                    que2.offer(sum + node.right.val);
-                }
-
-            }
+    private static boolean traversal(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
         }
-        return false;
+
+        if (root.left == null && root.right == null && sum == root.val) {
+            return true;
+        }
+        return traversal(root.left, sum - root.val) || traversal(root.right, sum - root.val);
     }
 }
