@@ -16,7 +16,7 @@ public class 二叉树层序遍历 {
 
         TreeOperation.show(treeNode);
 
-        List<Integer> datas = levelResve(treeNode);
+        List<Integer> datas = level(treeNode);
         datas.forEach(item -> {
             System.out.print(item + "  ");
         });
@@ -34,7 +34,7 @@ public class 二叉树层序遍历 {
            List<Integer> levelList = new ArrayList<>();
            int length = que.size();
 
-           while(length > 0) {
+           while(length -- > 0) {
                TreeNode node = que.poll();
                levelList.add(node.val);
                if (node.left != null) {
@@ -43,7 +43,6 @@ public class 二叉树层序遍历 {
                if (node.right != null) {
                    que.offer(node.right);
                }
-               length --;
            }
 
            resList.addAll(levelList);

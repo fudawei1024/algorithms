@@ -35,15 +35,15 @@ public class 二叉树的右视图 {
         que.offer(root);
         while(!que.isEmpty()) {
             int length = que.size();
-            while (length > 0) {
+            while (length-- > 0) {
                 TreeNode node = que.poll();
                 if (node.left != null) {
                     que.offer(node.left);
                 }
+
                 if (node.right != null) {
                     que.offer(node.right);
                 }
-                length --;
                 if (length == 0) {
                     resList.add(node.val);
                 }
