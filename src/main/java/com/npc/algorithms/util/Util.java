@@ -29,4 +29,13 @@ public class Util {
             }
         }
     }
+
+    public static void p(Boolean value) {
+        System.out.println(value);
+    }
+
+    public static void p(int value) {
+        System.out.println(value);
+    }
+
 }
