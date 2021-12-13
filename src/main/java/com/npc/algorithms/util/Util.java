@@ -2,6 +2,8 @@ package com.npc.algorithms.util;
 
 import com.npc.algorithms.list.ListNode;
 
+import java.util.List;
+
 public class Util {
     public static void p(ListNode head) {
         ListNode node = head;
@@ -38,4 +40,12 @@ public class Util {
         System.out.println(value);
     }
 
+    public static void p(List<List<Integer>> data) {
+        if (data != null && data.size() > 0) {
+            for (List<Integer> line : data) {
+                System.out.println(line + " ");
+            }
+            System.out.println();
+        }
+    }
 }
