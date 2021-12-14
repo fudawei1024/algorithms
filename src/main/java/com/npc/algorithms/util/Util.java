@@ -2,6 +2,10 @@ package com.npc.algorithms.util;
 
 import com.npc.algorithms.list.ListNode;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Util {
     public static void p(ListNode head) {
         ListNode node = head;
@@ -38,4 +42,14 @@ public class Util {
         System.out.println(value);
     }
 
+    public static void p(List<List<Integer>> result) {
+        if (result != null || result.size() > 0) {
+            for (List<Integer> integerList : result) {
+                for (Integer data : integerList) {
+                    System.out.print(data + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
 }
