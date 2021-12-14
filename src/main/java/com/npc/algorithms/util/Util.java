@@ -2,9 +2,7 @@ package com.npc.algorithms.util;
 
 import com.npc.algorithms.list.ListNode;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Util {
     public static void p(ListNode head) {
