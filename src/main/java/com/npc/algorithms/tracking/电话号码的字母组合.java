@@ -5,21 +5,10 @@ import com.npc.algorithms.util.Util;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @projectName: algorithms
- * @package: com.npc.algorithms.tracking
- * @className: 电话号码的字母组合
- * @author: fudawei
- * @description: TODO
- * @date: 2021/12/20 01:15
- * @version: 1.0
- */
 public class 电话号码的字母组合 {
 
     public static void main(String[] args) {
-        电话号码的字母组合 c = new 电话号码的字母组合();
-        List<String> result = c.letterCombinations("23");
-        Util.pL(result);
+        Util.pList(new 电话号码的字母组合().letterCombinations("23"));
     }
 
     //设置全局列表存储最后的结果

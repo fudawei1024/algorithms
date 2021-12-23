@@ -57,4 +57,12 @@ public class Util {
             }
         }
     }
+
+    public static void pList(List result) {
+        if (result != null || result.size() > 0) {
+            for (Object obj : result) {
+                System.out.println(obj);
+            }
+        }
+    }
 }
