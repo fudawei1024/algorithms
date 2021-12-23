@@ -47,7 +47,7 @@ public class Util {
         System.out.println(value);
     }
 
-    public static void p(List<List> result) {
+    public static void p(List<List<Integer>> result) {
         if (result != null || result.size() > 0) {
             for (List<Integer> integerList : result) {
                 for (Integer data : integerList) {
