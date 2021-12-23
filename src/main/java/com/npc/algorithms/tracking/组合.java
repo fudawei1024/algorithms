@@ -13,7 +13,7 @@ public class 组合 {
 
     public static void main(String[] args) {
         backtracking(5, 3, 1);
-        Util.p(result);
+        Util.pL(result);
     }
 
     public static void backtracking(int n, int k, int startIndex) {

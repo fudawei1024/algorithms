@@ -19,7 +19,7 @@ public class 组合 {
     public static void main(String[] args) {
         组合 组合实例 = new 组合();
         List<List<Integer>> result = 组合实例.combine(5,3);
-        Util.p(result);
+        Util.pL(result);
     }
 
     LinkedList<List<Integer>> result = new LinkedList<>();

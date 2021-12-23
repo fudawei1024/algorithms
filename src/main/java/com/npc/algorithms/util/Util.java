@@ -13,6 +13,13 @@ public class Util {
         }
     }
 
+    public static void pL(List list) {
+       if (list == null) {return;}
+        for (Object o : list) {
+            System.out.println(o);
+        }
+    }
+
     public static void pl() {
         System.out.println();
     }
@@ -40,7 +47,7 @@ public class Util {
         System.out.println(value);
     }
 
-    public static void p(List<List<Integer>> result) {
+    public static void p(List<List> result) {
         if (result != null || result.size() > 0) {
             for (List<Integer> integerList : result) {
                 for (Integer data : integerList) {
