@@ -6,19 +6,30 @@ import java.util.List;
 
 public class 分割回文串 {
 
-    List<List<String>> lists = new ArrayList<>();
-    LinkedList<String> deque = new LinkedList<>();
+    static List<List<String>> lists = new ArrayList<>();
+    static LinkedList<String> deque = new LinkedList<>();
     public static void main(String[] args) {
 
     }
 
-    public static boolean backtracking(String str, int startIndex) {
-        if (isPalindrome(str, startIndex,0)) {
+    public static void backtracking(String str, int startIndex) {
 
-        } else {
-
+        if (startIndex >= str.length()) {
+            lists.addAll(new ArrayList(deque));
+            return;
         }
-        return Boolean.TRUE;
+
+        for (int i = startIndex; i < str.length(); i++) {
+            if (isPalindrome(str, startIndex,i)) {
+                String tmp = str.substring(startIndex, i + 1);
+                deque.add(tmp);
+            } else {
+                continue;
+            }
+            //起始位置后移，保证不重复
+            backtracking(str, i + 1);
+            deque.removeLast();
+        }
     }
 
     public static boolean isPalindrome(String str, int start, int end) {
