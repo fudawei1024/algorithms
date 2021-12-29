@@ -1,8 +1,10 @@
 package com.npc.algorithms.greedy;
 
+import com.npc.algorithms.util.Util;
+
 public class 最大子序列之和 {
     public static void main(String[] args) {
-        System.out.println(new 最大子序列之和().maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        Util.p(new 最大子序列之和().maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
     }
 
     public int maxSubArray(int[] nums) {

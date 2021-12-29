@@ -1,10 +1,12 @@
 package com.npc.algorithms.greedy;
 
 
+import com.npc.algorithms.util.Util;
+
 public class 摆动序列 {
     public static void main(String[] args) {
         int c = new 摆动序列().wiggleMaxLength(new int[]{1,17,5,10,13,15,10,5,16,8});
-        System.out.println(c);
+        Util.p(c);
     }
     public int wiggleMaxLength(int[] nums) {
         if (nums == null) {

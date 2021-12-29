@@ -1,12 +1,14 @@
 package com.npc.algorithms.greedy;
 
+import com.npc.algorithms.util.Util;
+
 import java.util.Arrays;
 
 public class 分发饼干 {
 
     public static void main(String[] args) {
         int c = new 分发饼干().findContentChildren(new int[]{2,3,5}, new int[]{2,3,4});
-        System.out.println(c);
+        Util.p(c);
     }
     public int findContentChildren(int[] g, int[] s) {
         if (g == null || s == null || g.length ==0 || s.length == 0) {
