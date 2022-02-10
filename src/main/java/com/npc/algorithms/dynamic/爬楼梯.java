@@ -15,7 +15,7 @@ public class 爬楼梯 {
     }
 
     public static int climbStairs(int stairs) {
-        if (stairs ==0) {
+        if (stairs == 0) {
             return 0;
         }
         int[] d = new int[stairs + 1];
