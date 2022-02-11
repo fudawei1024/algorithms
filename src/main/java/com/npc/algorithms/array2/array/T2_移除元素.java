@@ -19,7 +19,7 @@ import java.util.Objects;
  */
 public class T2_移除元素 {
     public static void main(String[] args) {
-        System.out.println(removeElement(new int[]{1,2,3,4,4,6,7,4,9,4}, 1));
+        System.out.println(removeElement(new int[]{1,2,3,4,4,6,7,4,9,4}, 4));
     }
 
     private static int removeElement(int[] nums, int ele) {
