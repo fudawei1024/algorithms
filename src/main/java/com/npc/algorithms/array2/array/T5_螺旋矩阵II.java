@@ -17,22 +17,68 @@ import com.npc.algorithms.util.Util;
  */
 public class T5_螺旋矩阵II {
     public static void main(String[] args) {
-            int[][] array = generateMatrix(10);
+        int[][] array = generateMatrix2(20);
 
-            for (int i = 0; i < array.length; i++) {
-                for (int j = 0; j < array.length; j++) {
-                    if (array[i][j] < 10) {
-                        System.out.print( " " + array[i][j]);
-                    } else {
-                        System.out.print(array[i][j]);
-                    }
-                    System.out.print("     ");
-                }
-                System.out.println();
-                System.out.println();
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                    System.out.print(" " + suit(array[i][j]));
+                System.out.print("     ");
             }
+            System.out.println();
+            System.out.println();
         }
+    }
 
+    public static String suit(int value) {
+        if (value < 10) {
+            return "000" + String.valueOf(value);
+        } else if (value < 100 && value >= 10) {
+            return "00" + String.valueOf(value);
+        } if (value < 1000 && value >= 100) {
+            return "0" + String.valueOf(value);
+        }
+        return String.valueOf(value);
+    }
+
+    public static int[][] generateMatrix2(int n) {
+        int[][] matrix = new int[n][n];
+        int count = 0;
+        int offset = 1;
+        int loop = n / 2;
+        int startX = 0;
+        int startY = 0;
+        int mid = n / 2;
+        while (loop > 0) {
+            int i = startX;
+            int j = startY;
+
+            // 从左到右
+            for (; j < startX + n - offset; ++j) {
+                matrix[i][j] = ++ count;
+            }
+            // 从上到下
+            for (; i < startY + n - offset; ++i) {
+                matrix[i][j] = ++ count;
+            }
+            // 从右到左
+            for (; j > startX; --j) {
+                matrix[i][j] = ++ count;
+            }
+            // 从下到上
+            for (; i > startY; --i) {
+                matrix[i][j] = ++ count;
+            }
+
+            startX++;
+            startY++;
+            loop--;
+            offset += 2;
+        }
+        if (n % 2 == 1) {
+            matrix[mid][mid] = ++ count;
+        }
+        return matrix;
+    }
 
     public static int[][] generateMatrix(int n) {
         int[][] res = new int[n][n];
