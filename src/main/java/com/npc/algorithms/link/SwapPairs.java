@@ -1,4 +1,4 @@
-package com.npc.algorithms.list;
+package com.npc.algorithms.link;
 
 import com.npc.algorithms.util.Util;
 

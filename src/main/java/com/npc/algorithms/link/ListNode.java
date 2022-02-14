@@ -1,4 +1,4 @@
-package com.npc.algorithms.list;
+package com.npc.algorithms.link;
 
 public class ListNode {
     public int val;

@@ -1,4 +1,4 @@
-package com.npc.algorithms.list;
+package com.npc.algorithms.link;
 
 import com.npc.algorithms.util.Util;
 
@@ -16,22 +16,23 @@ public class RemoveElement {
     }
 
     public static ListNode removeElement(ListNode head, int val) {
-        if (head != null && head.val == val) {
-            head = head.next;
-        }
-        if (head == null) {
-            return head;
-        }
+       while (head != null && head.val == val) {
+           head = head.next;
+       }
+       if (head == null) {
+           return head;
+       }
 
-        ListNode pre = head;
-        ListNode cur = head.next;
-        while (cur != null) {
-            if (cur.val == val) {
-                pre.next = cur.next;
-            }
-            pre = cur;
-            cur = cur.next;
-        }
+       ListNode pre = head;
+       ListNode cur = head.next;
+       while (cur != null) {
+           if (cur.val == val) {
+               pre.next = cur.next;
+           } else {
+               pre = cur;
+           }
+           cur = cur.next;
+       }
        return head;
     }
 }

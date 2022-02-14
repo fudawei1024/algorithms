@@ -1,4 +1,4 @@
-package com.npc.algorithms.list;
+package com.npc.algorithms.link;
 
 public class 单项链表是否有环如果有环返回环的入口 {
 

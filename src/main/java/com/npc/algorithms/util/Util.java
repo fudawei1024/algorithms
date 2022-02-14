@@ -1,6 +1,6 @@
 package com.npc.algorithms.util;
 
-import com.npc.algorithms.list.ListNode;
+import com.npc.algorithms.link.ListNode;
 
 import java.util.List;
 
