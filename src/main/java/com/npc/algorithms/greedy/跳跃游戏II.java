@@ -1,7 +1,6 @@
 package com.npc.algorithms.greedy;
 
 import com.npc.algorithms.util.Util;
-import sun.tools.jconsole.MaximizableInternalFrame;
 
 public class 跳跃游戏II {
     public static void main(String[] args) {

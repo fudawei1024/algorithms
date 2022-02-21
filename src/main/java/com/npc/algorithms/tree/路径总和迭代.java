@@ -1,12 +1,10 @@
 package com.npc.algorithms.tree;
 
 import com.npc.algorithms.util.TreeOperation;
-import javafx.util.Pair;
-import sun.lwawt.macosx.CSystemTray;
+
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 public class 路径总和迭代 {
     public static void main(String[] args) {
