@@ -8,7 +8,7 @@ public class Util {
     public static void p(ListNode head) {
         ListNode node = head;
         while (node != null) {
-            System.out.print(node.val + " ");
+            System.out.print(node.val + "-" + node.hashCode() + "    ");
             node = node.next;
         }
     }
