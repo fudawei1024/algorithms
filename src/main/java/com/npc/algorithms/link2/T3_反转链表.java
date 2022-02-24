@@ -22,11 +22,29 @@ public class T3_反转链表 {
 
         System.out.println();
 
-        ListNode node = reverseList(head);
+        ListNode node = reverseList2(head);
         Util.p(node);
     }
 
-    private static ListNode reverseList(ListNode head) {
+    public static ListNode reerseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode cur = head;
+        ListNode pre = null;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+
+        return pre;
+    }
+
+
+    private static ListNode reverseList2(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {
