@@ -1,7 +1,6 @@
 package com.npc.algorithms.greedy;
 
 import com.npc.algorithms.util.Util;
-import com.sun.deploy.uitoolkit.impl.awt.UIToolkitImpl;
 
 public class 跳跃游戏 {
     public static void main(String[] args) {
