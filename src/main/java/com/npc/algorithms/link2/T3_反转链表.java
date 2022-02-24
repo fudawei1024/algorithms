@@ -20,9 +20,9 @@ public class T3_反转链表 {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4,new ListNode(5, new ListNode(6,null))))));
         Util.p(head);
 
-        System.out.println();
+        Util.pl();
 
-        ListNode node = reverseList2(head);
+        ListNode node = reerseList(head);
         Util.p(node);
     }
 
