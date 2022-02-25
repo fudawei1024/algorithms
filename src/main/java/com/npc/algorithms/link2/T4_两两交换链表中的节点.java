@@ -23,7 +23,7 @@ public class T4_两两交换链表中的节点 {
 
         System.out.println();
 
-        ListNode node = swapPaire(head);
+        ListNode node = swapPair(head);
         Util.p(node);
     }
 
@@ -39,4 +39,16 @@ public class T4_两两交换链表中的节点 {
         return next;
     }
 
+    private static ListNode swapPair(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode next = head.next;
+        ListNode swpNode = swapPair(next.next);
+        next.next = head;
+        head.next = swpNode;
+
+        return next;
+    }
 }

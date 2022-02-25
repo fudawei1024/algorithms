@@ -18,23 +18,32 @@ public class 二叉搜索树的最近公共祖先 {
 
         TreeOperation.show(root);
         System.out.println();
-        TreeNode result = lowestCommonAncestor(root, root.left.left, root.left.right.right);
-        System.out.println(result.val);
+        TreeNode result = lowestCommonAncestor(root, root.left.left, root.left.right);
+        if (result == null) {
+            System.out.println(result.val);
+        } else {
+            System.out.println("empty");
+        }
+        TreeOperation.show(result);
+
     }
 
     private static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) {
+        if (root == null || root == p || root == q) { // 递归结束条件
             return root;
         }
 
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if (left != null && right != null) {
-            return root;
-        } else if (left == null) {
+        if(left == null && right == null) { // 若未找到节点 p 或 q
+            return null;
+        }else if(left == null && right != null) { // 若找到一个节点
             return right;
+        }else if(left != null && right == null) { // 若找到一个节点
+            return left;
+        }else { // 若找到两个节点
+            return root;
         }
-        return left;
     }
 }

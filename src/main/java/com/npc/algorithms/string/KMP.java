@@ -5,7 +5,7 @@ package com.npc.algorithms.string;
  * @package: com.npc.algorithms.string
  * @className: KMP
  * @author: fudawei
- * @description: TODO
+ * @description:  KMP
  * @date: 2021/11/17 11:05
  * @version: 1.0
  */

@@ -16,7 +16,6 @@ public class N叉树的层序遍历 {
         List<Node> childList2 = new ArrayList<>();
         childList2.add(new Node(5));
         childList2.add(new Node(6));
-
         childList1.add(new Node(3, childList2));
         childList1.add(new Node(2));
         childList1.add(new Node(4));
