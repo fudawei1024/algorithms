@@ -1,5 +1,8 @@
 package com.npc.algorithms.codecapriccio.array;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * @author fudawei
  * @date 2022年06月23日 11:28
@@ -21,12 +24,24 @@ package com.npc.algorithms.codecapriccio.array;
  */
 public class _1_E3_x的平方根 {
 
+    @Test
+    public void testRange() {
+        Assert.assertEquals(2,mySqrt(5));
+        Assert.assertEquals(2,mySqrt(6));
+        Assert.assertEquals(3,mySqrt(9));
+    }
+
     public int mySqrt(int x) {
         int low = 0, high = x, ans = -1;
         while (low <= high) {
             int mid = low + ((high - low) / 2 );
-
+            if ((long) mid * mid <= x) {
+                ans = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
         }
-        return 0;
+        return ans;
     }
 }
