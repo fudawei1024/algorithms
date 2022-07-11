@@ -1,5 +1,9 @@
 package com.npc.algorithms.codecapriccio.array;
 
+import com.npc.algorithms.backup.util.Util;
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * 给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。
  * 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，
@@ -28,4 +32,23 @@ package com.npc.algorithms.codecapriccio.array;
  *
  */
 public class _2_E1_删除有序数组中的重复项 {
+    @Test
+    public void test() {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        Util.p(nums);
+        Util.p(removeDuplicates(nums));
+        Util.p(nums);
+    }
+
+    public int removeDuplicates(int[] nums) {
+        if (nums == null || nums.length == 0) return -1;
+        int slow = 1,fast = 1;
+        while (fast < nums.length) {
+            if (nums[fast] != nums[fast - 1]) {
+                nums[slow++] = nums[fast];
+            }
+            fast++;
+        }
+        return slow;
+    }
 }

@@ -37,6 +37,7 @@ public class Util {
                 System.out.print(str[i] + " ");
             }
         }
+        System.out.println();
     }
 
     public static void p(Boolean value) {
