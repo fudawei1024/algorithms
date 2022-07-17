@@ -1,7 +1,10 @@
 package com.npc.algorithms.codecapriccio.array;
 
 import com.npc.algorithms.backup.util.Util;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.HashMap;
 
 /**
  * 给定一个含有n个正整数的数组和一个正整数 target 。
@@ -38,25 +41,35 @@ public class _4_A_长度最小的子数组 {
 
     @Test
     public void test() {
-        int[] nums = {2,3,1,2,4,3};
-        Util.p(minSubArrayLen(7, nums));
+        int[] tree = {2,3,1,2,4,3};
+        Assert.assertEquals(2, totalFruit(tree));
     }
 
-    public int minSubArrayLen(int target, int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-
-        int start = 0, end = 0, len = nums.length - 1, sum = 0,ans = Integer.MAX_VALUE;
-        while (end < len) {
-            sum += nums[end];
-            while (sum >= target) {
-                ans = Math.min(ans, end - start + 1);
-                sum -= nums[start++];
+    public int totalFruit(int[] tree) {
+        int ans = 0, left = 0, right = 0;
+        Counter counter = new Counter();
+        while (right < tree.length) {
+            counter.add(tree[right], 1);
+            if (counter.size() > 2) {
+                counter.add(tree[left], -1);
+                if (counter.get(tree[left]) == 0) {
+                     counter.remove(tree[left]);
+                     left++;
+                }
             }
-            end ++;
-        }
 
-        return Math.min(ans, Integer.MAX_VALUE);
+            ans = Math.max(ans, right++ - left + 1);
+        }
+        return ans;
+    }
+}
+
+class Counter extends HashMap<Integer, Integer> {
+    public Integer get(Integer k) {
+        return containsKey(k) ? super.get(k) : 0;
+    }
+
+    public void add(Integer k, Integer v) {
+        put(k, get(k) + v);
     }
 }
