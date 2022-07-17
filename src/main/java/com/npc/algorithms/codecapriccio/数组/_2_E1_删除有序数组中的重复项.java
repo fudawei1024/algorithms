@@ -1,7 +1,6 @@
-package com.npc.algorithms.codecapriccio.array;
+package com.npc.algorithms.codecapriccio.数组;
 
 import com.npc.algorithms.backup.util.Util;
-import org.junit.Assert;
 import org.junit.Test;
 
 /**

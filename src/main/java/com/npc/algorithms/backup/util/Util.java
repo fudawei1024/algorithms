@@ -13,6 +13,14 @@ public class Util {
         }
     }
 
+    public static void pV(ListNode head) {
+        ListNode node = head;
+        while (node != null) {
+            System.out.print(node.val + " ");
+            node = node.next;
+        }
+    }
+
     public static void pL(List list) {
        if (list == null) {return;}
         for (Object o : list) {
@@ -65,5 +73,15 @@ public class Util {
                 System.out.println(obj);
             }
         }
+    }
+
+    public static ListNode array2List(int[] array) {
+        ListNode head = new ListNode(array[0]);
+        ListNode temp = head;
+        for (int i = 1; i < array.length; i++) {
+            temp.next = new ListNode(array[i]);
+            temp = temp.next;
+        }
+        return head;
     }
 }

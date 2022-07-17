@@ -1,4 +1,4 @@
-package com.npc.algorithms.codecapriccio.array;
+package com.npc.algorithms.codecapriccio.数组;
 
 import org.junit.Assert;
 import org.junit.Test;

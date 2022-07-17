@@ -9,7 +9,14 @@ public class ListNode {
         this.next = next;
     }
 
+    public ListNode() {
+    }
+
     public ListNode(int val) {
+        this.val = val;
+    }
+
+    public void setVal(Integer val) {
         this.val = val;
     }
 }
