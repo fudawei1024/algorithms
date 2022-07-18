@@ -1,4 +1,4 @@
-package com.npc.algorithms.codecapriccio.链表;
+package com.npc.algorithms.算法练习.链表;
 
 import com.npc.algorithms.backup.link.ListNode;
 import com.npc.algorithms.backup.util.Util;
