@@ -1,4 +1,4 @@
-package com.npc.algorithms.codecapriccio.数组;
+package com.npc.algorithms.算法练习.数组;
 
 import com.npc.algorithms.backup.util.Util;
 import org.junit.Test;

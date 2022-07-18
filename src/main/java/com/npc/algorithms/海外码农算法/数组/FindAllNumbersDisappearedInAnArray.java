@@ -1,4 +1,4 @@
-package com.npc.algorithms.bayareacoder.array;
+package com.npc.algorithms.海外码农算法.数组;
 
 import com.npc.algorithms.backup.util.Util;
 import org.junit.Test;
