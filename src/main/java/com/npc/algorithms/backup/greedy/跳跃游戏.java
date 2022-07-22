@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.greedy;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 public class 跳跃游戏 {
     public static void main(String[] args) {

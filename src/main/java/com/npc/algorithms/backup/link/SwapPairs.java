@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.link;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 public class SwapPairs {
 

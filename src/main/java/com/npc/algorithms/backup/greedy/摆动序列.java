@@ -1,7 +1,7 @@
 package com.npc.algorithms.backup.greedy;
 
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 public class 摆动序列 {
     public static void main(String[] args) {

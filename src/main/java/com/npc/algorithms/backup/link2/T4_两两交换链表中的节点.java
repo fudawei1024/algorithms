@@ -1,7 +1,7 @@
 package com.npc.algorithms.backup.link2;
 
 import com.npc.algorithms.backup.link.ListNode;
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 /**
  * @className: T4_两两交换链表中的节点

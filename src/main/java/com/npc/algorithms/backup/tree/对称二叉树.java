@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.tree;
 
-import com.npc.algorithms.backup.util.TreeOperation;
+import com.npc.algorithms.util.TreeOperation;
 
 import java.util.Deque;
 import java.util.LinkedList;

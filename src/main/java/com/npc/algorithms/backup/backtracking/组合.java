@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.backtracking;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

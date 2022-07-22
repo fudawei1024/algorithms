@@ -1,7 +1,8 @@
-package com.npc.algorithms.backup.util;
+package com.npc.algorithms.util;
 
 import com.npc.algorithms.backup.link.ListNode;
 
+import java.util.Deque;
 import java.util.List;
 
 public class Util {
@@ -22,11 +23,50 @@ public class Util {
     }
 
     public static void pL(List list) {
-       if (list == null) {return;}
+       if (list == null) {
+           return;
+       }
+        System.out.println();
         for (Object o : list) {
-            System.out.println(o);
+            System.out.print(o + " ");
         }
+        System.out.println();
     }
+
+    public static void pL(Deque list) {
+        if (list == null) {
+            return;
+        }
+        System.out.println();
+        for (Object o : list) {
+            System.out.print(o + " ");
+        }
+        System.out.println();
+    }
+
+    public static void pL(String str, Deque list) {
+        System.out.println(str);
+        if (list == null) {
+            return;
+        }
+        for (Object o : list) {
+            System.out.print(o + " ");
+        }
+        System.out.println();
+    }
+
+    public static void pL(String preText,List list) {
+        if (list == null) {
+            return;
+        }
+        System.out.println();
+        System.out.print(preText + " ");
+        for (Object o : list) {
+            System.out.print(o + " ");
+        }
+        System.out.println();
+    }
+
 
     public static void pl() {
         System.out.println();
@@ -83,5 +123,9 @@ public class Util {
             temp = temp.next;
         }
         return head;
+    }
+
+    public static void p(String s) {
+        System.out.println(s);
     }
 }

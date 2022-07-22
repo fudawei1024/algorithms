@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.array2.array;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 /**
  * @className: 有序数组的平方

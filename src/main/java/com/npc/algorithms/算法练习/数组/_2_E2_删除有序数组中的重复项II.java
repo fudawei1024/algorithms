@@ -1,6 +1,6 @@
 package com.npc.algorithms.算法练习.数组;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 import org.junit.Test;
 
 /**

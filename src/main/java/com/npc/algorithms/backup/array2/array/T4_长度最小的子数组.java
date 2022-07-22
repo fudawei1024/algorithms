@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.array2.array;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 /**
  * @className: T4_长度最小的子数组

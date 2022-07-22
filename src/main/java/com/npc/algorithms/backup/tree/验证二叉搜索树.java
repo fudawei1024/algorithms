@@ -1,7 +1,7 @@
 package com.npc.algorithms.backup.tree;
 
-import com.npc.algorithms.backup.util.TreeOperation;
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.TreeOperation;
+import com.npc.algorithms.util.Util;
 
 public class 验证二叉搜索树 {
     public static void main(String[] args) {

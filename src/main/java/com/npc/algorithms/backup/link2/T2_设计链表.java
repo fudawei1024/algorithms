@@ -1,7 +1,7 @@
 package com.npc.algorithms.backup.link2;
 
 import com.npc.algorithms.backup.link.ListNode;
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 /**
  * @className: T2_设计链表

@@ -2,8 +2,8 @@ package com.npc.algorithms.backup;
 
 import com.npc.algorithms.backup.tree.TreeNode;
 import com.npc.algorithms.backup.link.ListNode;
-import com.npc.algorithms.backup.util.TreeOperation;
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.TreeOperation;
+import com.npc.algorithms.util.Util;
 
 /**
  * @className: List2Tree

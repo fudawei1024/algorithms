@@ -1,4 +1,4 @@
-package com.npc.algorithms.backup.util;
+package com.npc.algorithms.util;
 
 import com.npc.algorithms.backup.tree.TreeNode;
 

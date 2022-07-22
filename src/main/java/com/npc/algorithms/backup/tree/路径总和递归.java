@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.tree;
 
-import com.npc.algorithms.backup.util.TreeOperation;
+import com.npc.algorithms.util.TreeOperation;
 
 public class 路径总和递归 {
     public static void main(String[] args) {

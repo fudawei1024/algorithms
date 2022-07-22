@@ -1,6 +1,6 @@
 package com.npc.algorithms.backup.string;
 
-import com.npc.algorithms.backup.util.Util;
+import com.npc.algorithms.util.Util;
 
 public class 字符串反转 {
     public static void main(String[] args) {
