@@ -1,12 +1,9 @@
-package com.npc.algorithms.算法练习.二叉树;
+package com.npc.algorithms.算法练习.二叉树doing;
 
 import com.npc.algorithms.backup.tree.TreeNode;
 import com.npc.algorithms.util.TreeOperation;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Deque;
-import java.util.LinkedList;
 
 /**
  * 给你两棵二叉树 root 和 subRoot 。检验 root 中是否包含和 subRoot 具有相同结构和节点值的子树。如果存在，返回 true ；否则，返回 false 。

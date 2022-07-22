@@ -1,8 +1,7 @@
-package com.npc.algorithms.算法练习.二叉树;
+package com.npc.algorithms.算法练习.二叉树doing;
 
 import com.npc.algorithms.backup.tree.TreeNode;
 import com.npc.algorithms.util.TreeOperation;
-import com.npc.algorithms.util.Util;
 import org.junit.Test;
 
 import java.util.*;
