@@ -20,7 +20,7 @@ public class 二叉搜索树的最近公共祖先 {
         System.out.println();
         TreeNode result = lowestCommonAncestor(root, root.left.left, root.left.right);
         if (result == null) {
-            System.out.println(result.val);
+            System.out.println(result.value);
         } else {
             System.out.println("empty");
         }

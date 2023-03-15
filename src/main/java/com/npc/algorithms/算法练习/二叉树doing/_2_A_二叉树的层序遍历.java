@@ -48,7 +48,7 @@ public class _2_A_二叉树的层序遍历 {
             int count = deque.size();
             while (count-- > 0) {
                 TreeNode node = deque.poll();
-                item.add(node.val);
+                item.add(node.value);
                 if (node.left != null) {
                     deque.offer(node.left);
                 }
@@ -70,7 +70,7 @@ public class _2_A_二叉树的层序遍历 {
             List<Integer> item = new ArrayList<>();
             resList.add(item);
         }
-        resList.get(depth - 1).add(cur.val);
+        resList.get(depth - 1).add(cur.value);
         levelOrder2(cur.left,resList, depth);
         levelOrder2(cur.right,resList, depth);
     }

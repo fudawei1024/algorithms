@@ -1,9 +1,9 @@
 package com.npc.algorithms.util;
 
-import com.npc.algorithms.backup.tree.TreeNode;
+import com.npc.algorithms.手写常见数据结构.AVL;
 
 // TreeOperation.java
-public class TreeOperation {
+public class AVLOperation {
     /*
     树的结构示例：
               1
@@ -14,12 +14,12 @@ public class TreeOperation {
     */
 
     // 用于获得树的层数
-    public static int getTreeDepth(TreeNode root) {
+    public static int getTreeDepth(AVL.AVLNode root) {
         return root == null ? 0 : (1 + Math.max(getTreeDepth(root.left), getTreeDepth(root.right)));
     }
 
 
-    private static void writeArray(TreeNode currNode, int rowIndex, int columnIndex, String[][] res, int treeDepth) {
+    private static void writeArray(AVL.AVLNode currNode, int rowIndex, int columnIndex, String[][] res, int treeDepth) {
         // 保证输入的树不为空
         if (currNode == null) return;
         // 先将当前节点保存到二维数组中
@@ -46,7 +46,7 @@ public class TreeOperation {
     }
 
 
-    public static void show(TreeNode root) {
+    public static void show(AVL.AVLNode root) {
         if (root == null) System.out.println("EMPTY!");
         // 得到树的深度
         int treeDepth = getTreeDepth(root);
@@ -74,7 +74,7 @@ public class TreeOperation {
             for (int i = 0; i < line.length; i ++) {
                 sb.append(line[i]);
                 if (line[i].length() > 1 && i <= line.length - 1) {
-                    i += line[i].length() > 4 ? 2: line[i].length() - 1;
+                    i += line[i].length() > 4 ? 3: line[i].length() - 1;
                 }
             }
             System.out.println(sb.toString());

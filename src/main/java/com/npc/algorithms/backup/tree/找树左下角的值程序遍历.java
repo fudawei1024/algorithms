@@ -23,7 +23,7 @@ public class 找树左下角的值程序遍历 {
     private static void findLeftValue(TreeNode root, int deep) {
         if (root != null && root.left == null && root.right == null) {
             if (deep > Deep) {
-                value = root.val;
+                value = root.value;
                 Deep = deep;
             }
             return;
@@ -34,7 +34,7 @@ public class 找树左下角的值程序遍历 {
 
     private static int findBottomLeftValue2(TreeNode root) {
         if (root == null) return value;
-        value = root.val;
+        value = root.value;
         findLeftValue(root, 0);
         return value;
     }
@@ -51,7 +51,7 @@ public class 找树左下角的值程序遍历 {
             while (size > 0) {
                 TreeNode node = que.poll();
                 if (tmp == size) {
-                    res = node.val;
+                    res = node.value;
                 }
                 if (node.left != null) {
                     que.offer(node.left);

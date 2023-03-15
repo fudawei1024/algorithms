@@ -24,9 +24,9 @@ public class 路径总和递归 {
             return false;
         }
 
-        if (root.left == null && root.right == null && sum == root.val) {
+        if (root.left == null && root.right == null && sum == root.value) {
             return true;
         }
-        return traversal(root.left, sum - root.val) || traversal(root.right, sum - root.val);
+        return traversal(root.left, sum - root.value) || traversal(root.right, sum - root.value);
     }
 }

@@ -35,7 +35,7 @@ public class 二叉树的所有路径递归 {
     }
 
     private static void traversal(TreeNode root, List<Integer> paths, List<String> res) {
-        paths.add(root.val);
+        paths.add(root.value);
         if (root.left == null && root.right == null) {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < paths.size() - 1; i++) {

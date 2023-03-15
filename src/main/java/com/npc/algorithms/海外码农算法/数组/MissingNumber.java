@@ -1,5 +1,6 @@
 package com.npc.algorithms.海外码农算法.数组;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -107,5 +108,10 @@ public class MissingNumber {
         }
 
         return result;
+    }
+
+    @AfterClass
+    public static void afterClass() throws Exception {
+
     }
 }

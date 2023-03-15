@@ -28,24 +28,24 @@ public class 路径总和迭代 {
         Queue<TreeNode> que1 = new LinkedList<>();
         Queue<Integer> que2 = new LinkedList<>();
         que1.offer(root);
-        que2.offer(root.val);
+        que2.offer(root.value);
         while (!que1.isEmpty()) {
             int size = que1.size();
             while (size -- > 0) {
                 TreeNode node = que1.poll();
-                System.out.print(node.val + "  ");
+                System.out.print(node.value + "  ");
                 int sum = que2.poll();
                 // 如果该节点是叶子节点了，同时该节点的路径数值等于sum，那么就返回true
                 if (node.left == null && node.right == null && sum == targetsum) return true;
                 // 左节点，压进去一个节点的时候，将该节点的路径数值也记录下来
                 if (node.left != null) {
                     que1.offer(node.left);
-                    que2.offer(sum + node.left.val);
+                    que2.offer(sum + node.left.value);
                 }
                 // 右节点，压进去一个节点的时候，将该节点的路径数值也记录下来
                 if (node.right != null) {
                     que1.offer(node.right);
-                    que2.offer(sum + node.right.val);
+                    que2.offer(sum + node.right.value);
                 }
 
             }

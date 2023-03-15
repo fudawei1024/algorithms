@@ -23,11 +23,11 @@ public class 二叉搜索树中的搜索 {
         }
 
         TreeNode treeNode = null;
-        if (root.val == target) {
+        if (root.value == target) {
             return root;
-        } else if (root.val < target) {
+        } else if (root.value < target) {
             treeNode = searchBST(root.right, target);
-        } else if (root.val > target) {
+        } else if (root.value > target) {
             treeNode = searchBST(root.left, target);
         }
         return treeNode;

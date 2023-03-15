@@ -50,7 +50,7 @@ public class 对称二叉树 {
         if (left == null && right != null) return false;
         if (left != null && right == null) return false;
         if (left == null && right == null) return true;
-        if (left.val != right.val) return false;
+        if (left.value != right.value) return false;
 
         return compare(left.left, right.right) && compare(left.right, right.left);
     }
@@ -70,7 +70,7 @@ public class 对称二叉树 {
             if (left == null && right == null) {
                 continue;
             }
-            if (left == null || right == null || left.val != right.val) {
+            if (left == null || right == null || left.value != right.value) {
                 return false;
             }
 

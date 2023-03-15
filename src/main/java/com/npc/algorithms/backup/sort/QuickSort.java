@@ -1,6 +1,7 @@
 package com.npc.algorithms.backup.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * @className: QuikSort
@@ -13,12 +14,14 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        quickSort(new int[]{4, 8, 2,6, 7, 6, 0,2, 1});
+        int[] arr = new int[]{4, 8, 3, 6, 7, 1, 0, 2, 5};
+        quickSort(arr);
+        System.out.println(new Random().nextInt(arr.length - 1));
     }
 
     public static void quickSort(int[] arr){
         System.out.println(Arrays.toString(arr));
-        quickSort(arr, 0, arr.length - 1);
+        quickSort2(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -27,51 +30,69 @@ public class QuickSort {
             return ;
         }
         if (left < right) {
-            int mid = partition(arr, left, right);
-            quickSort(arr, left, mid - 1);
-            quickSort(arr, mid + 1, right);
+            //swap(arr, (left + (int)(Math.random() * (right - left + 1))), right);
+            int[] tmpArr = partition2(arr, left, right);
+            quickSort(arr, left, tmpArr[0] - 1);
+            quickSort(arr, tmpArr[1] + 1, right);
         }
     }
 
-    private static int partition(int[] arr, int left, int right) {
-        int pivot = arr[left];
-        while (left < right) {
-            while (left < right && arr[right] >= pivot) {
-                right --;
-            }
-            arr[left] = arr[right];
-
-            while (left < right && arr[left] <= pivot) {
-                left ++;
-            }
-            arr[right] = arr[left];
-
+    private static void quickSort2(int[] arr, int left, int right) {
+        if (arr == null) {
+            return ;
         }
-        arr[left] = pivot;
-        return left;
+
+        if (left < right) {
+            swap(arr, (left + (int)(Math.random() * (right - left + 1))), right);
+            int[] par = partition2(arr, left, right);
+            quickSort2(arr, left, par[0] - 1);
+            quickSort2(arr, par[1] + 1, right);
+        }
     }
 
+//    private static int partition(int[] arr, int left, int right) {
+//        int pivot = arr[left];
+//        while (left < right) {
+//            while (left < right && arr[right] >= pivot) {
+//                right --;
+//            }
+//            arr[left] = arr[right];
+//
+//            while (left < right && arr[left] <= pivot) {
+//                left ++;
+//            }
+//            arr[right] = arr[left];
+//        }
+//        arr[left] = pivot;
+//        return left;
+//    }
 
-    private static int partition2(int[] arr, int left, int right) {
-        int midIndex = left + ((right - left) >> 1);
-        int pivot = arr[midIndex];
-        while (left < right) {
-            while (left < right && arr[right] > pivot) {
-                right --;
+    private static int[] partition2(int[] arr, int left, int right) {
+        int key = arr[right];
+        int current = left;
+
+        int small = left - 1;
+        int big = right;
+
+        while (current < big) {
+            if (arr[current] < key) {
+                swap(arr, ++ small, current ++);
+            } else if (arr[current] > key) {
+                swap(arr, current, --big);
+            } else {
+                current ++;
             }
-            arr[left] = arr[right];
-
-            while (left < right && arr[left] < pivot) {
-                left ++;
-            }
-            arr[right] = arr[left];
-
         }
-        arr[left] = pivot;
-        return left;
+
+        swap(arr, right, big);
+        return new int[]{small + 1, big};
     }
 
-
+    private static void swap(int[] arr, int left, int right) {
+        int tmp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = tmp;
+    }
 }
 
 

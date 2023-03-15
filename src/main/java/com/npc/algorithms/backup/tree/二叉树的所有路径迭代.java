@@ -32,7 +32,7 @@ public class 二叉树的所有路径迭代 {
         }
         Stack<Object> stack = new Stack<>();
         stack.push(root);
-        stack.push(root.val + "");
+        stack.push(root.value + "");
         while (!stack.isEmpty()) {
             String path = (String)stack.pop();
             TreeNode node = (TreeNode) stack.pop();
@@ -42,11 +42,11 @@ public class 二叉树的所有路径迭代 {
 
             if (node.right != null) {
                 stack.push(node.right);
-                stack.push(path + "->" + node.right.val);
+                stack.push(path + "->" + node.right.value);
             }
             if (node.left != null) {
                 stack.push(node.left);
-                stack.push(path + "->" + node.left.val);
+                stack.push(path + "->" + node.left.value);
             }
         }
         return res;

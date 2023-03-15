@@ -40,7 +40,7 @@ public class 二叉树的层平均值 {
             int count = 0;
             while (length > 0) {
                 TreeNode node = que.poll();
-                sum += node.val * 1.0;
+                sum += node.value * 1.0;
                 count ++;
                 if (node.left != null) {
                     que.offer(node.left);

@@ -45,7 +45,7 @@ public class 二叉树的右视图 {
                     que.offer(node.right);
                 }
                 if (length == 0) {
-                    resList.add(node.val);
+                    resList.add(node.value);
                 }
             }
         }

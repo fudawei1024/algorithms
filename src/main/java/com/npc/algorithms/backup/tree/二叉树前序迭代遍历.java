@@ -42,7 +42,7 @@ public class 二叉树前序迭代遍历 {
                 stack.push(node.left);
             }
 
-            result.add(node.val);
+            result.add(node.value);
         }
         return result;
     }

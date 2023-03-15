@@ -18,7 +18,7 @@ public class _1_A_二叉树的递归遍历 {
     public void testSearch() {
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(2);
-        root.right = new TreeNode(7);
+        root.right = new TreeNode(8);
         root.left.left = new TreeNode(1);
         root.left.right = new TreeNode(3);
         root.right.left = new TreeNode(7);
@@ -69,7 +69,7 @@ public class _1_A_二叉树的递归遍历 {
                 st.pop();           // 将空节点弹出
                 node = st.peek();    // 重新取出栈中元素
                 st.pop();
-                result.add(node.val); // 加入到结果集
+                result.add(node.value); // 加入到结果集
             }
         }
         return result;
@@ -79,7 +79,7 @@ public class _1_A_二叉树的递归遍历 {
         if (root == null) {
             return;
         }
-        result.add(root.val);
+        result.add(root.value);
         preorderTraversal(result, root.left);
         preorderTraversal(result, root.right);
     }
@@ -95,7 +95,7 @@ public class _1_A_二叉树的递归遍历 {
             return;
         }
         mindTraversal(result, root.left);
-        result.add(root.val);
+        result.add(root.value);
         mindTraversal(result, root.right);
     }
 
@@ -116,7 +116,7 @@ public class _1_A_二叉树的递归遍历 {
                 st.pop();           // 将空节点弹出
                 node = st.peek();    // 重新取出栈中元素
                 st.pop();
-                result.add(node.val); // 加入到结果集
+                result.add(node.value); // 加入到结果集
             }
         }
         return result;
@@ -138,7 +138,7 @@ public class _1_A_二叉树的递归遍历 {
             } else {
                 stack.pop();
                 node = stack.pop();
-                result.add(node.val);
+                result.add(node.value);
             }
         }
         return result;
@@ -156,6 +156,6 @@ public class _1_A_二叉树的递归遍历 {
         }
         endTraversal(result, root.left);
         endTraversal(result, root.right);
-        result.add(root.val);
+        result.add(root.value);
     }
 }

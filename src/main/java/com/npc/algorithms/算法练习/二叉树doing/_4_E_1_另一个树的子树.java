@@ -75,7 +75,7 @@ public class _4_E_1_另一个树的子树 {
         if (s == null && t == null) {
             return true;
         }
-        if (s == null || t == null || s.val != t.val) {
+        if (s == null || t == null || s.value != t.value) {
             return false;
         }
         return check(s.left, t.left) && check(s.right, t.right);

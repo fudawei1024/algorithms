@@ -73,7 +73,7 @@ public class _4_A_对称二叉树 {
             return false;
         }
 
-        return left.val == right.val && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
+        return left.value == right.value && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
     }
 
 
@@ -88,7 +88,7 @@ public class _4_A_对称二叉树 {
             if (left == null && right == null) {
                 continue;
             }
-            if (left == null || right == null || left.val != right.val) {
+            if (left == null || right == null || left.value != right.value) {
                 return false;
             }
 

@@ -19,7 +19,7 @@ public class 二叉树的最近公共祖先 {
         TreeOperation.show(treeNode);
         System.out.println();
         TreeNode result = lowestCommonAncestor(treeNode, treeNode.left.right, treeNode.left.right.right);
-        System.out.println(result.val);
+        System.out.println(result.value);
     }
 
     private static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

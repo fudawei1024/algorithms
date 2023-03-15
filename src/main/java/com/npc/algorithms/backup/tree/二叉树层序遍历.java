@@ -37,7 +37,7 @@ public class 二叉树层序遍历 {
             int size = que.size();
             while (size -- > 0) {
                 TreeNode node = que.poll();
-                levelList.add(node.val);
+                levelList.add(node.value);
                 if (node.left != null) {
                     que.add(node.left);
                 }
@@ -65,7 +65,7 @@ public class 二叉树层序遍历 {
 
            while(length -- > 0) {
                TreeNode node = que.poll();
-               levelList.add(node.val);
+               levelList.add(node.value);
                if (node.left != null) {
                    que.offer(node.left);
                }
@@ -94,7 +94,7 @@ public class 二叉树层序遍历 {
 
             while(length > 0) {
                 TreeNode node = que.poll();
-                levelList.add(node.val);
+                levelList.add(node.value);
 
                 if (node.right != null) {
                     que.offer(node.right);

@@ -2,6 +2,7 @@ package com.npc.algorithms.util;
 
 import com.npc.algorithms.backup.link.ListNode;
 
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
@@ -127,5 +128,17 @@ public class Util {
 
     public static void p(String s) {
         System.out.println(s);
+    }
+
+    public static int[] randomNumbers() {
+        int max = 20;
+        int count = 10;
+        List<Integer> list = new ArrayList<>(10);
+        int[] array = new int[count];
+        for (int i = 0; i < count; i++) {
+            array[i] = (int) (Math.random() * max);
+        }
+
+        return array;
     }
 }

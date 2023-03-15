@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -56,7 +57,8 @@ public class ContainsDuplicate {
                 return true;
             }
         }
-
+        HashMap map = new HashMap();
+        map.put("","");
         return false;
     }
 

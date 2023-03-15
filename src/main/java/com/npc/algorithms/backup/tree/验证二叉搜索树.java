@@ -27,7 +27,7 @@ public class 验证二叉搜索树 {
         }
         getMinimumDifference(root.left);
         if (preNode != null) {
-            result = Math.min(result , root.val - preNode.val);
+            result = Math.min(result , root.value - preNode.value);
         }
         preNode = root;
         getMinimumDifference(root.right);

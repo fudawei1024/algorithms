@@ -14,7 +14,7 @@ package com.npc.algorithms.backup.tree;
 public class TreeNode {
     public TreeNode left;
     public TreeNode right;
-    public int val;
+    public int value;
     public TreeNode next;
 
     public TreeNode(TreeNode left, TreeNode right) {
@@ -22,7 +22,7 @@ public class TreeNode {
         this.right = right;
     }
 
-    public TreeNode(int val) {
-        this.val = val;
+    public TreeNode(int value) {
+        this.value = value;
     }
 }

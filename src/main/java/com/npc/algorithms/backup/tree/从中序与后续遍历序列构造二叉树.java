@@ -105,7 +105,7 @@ public class 从中序与后续遍历序列构造二叉树 {
         if (data == null) {
             data = new ArrayList<>();
         }
-        data.add(root.val);
+        data.add(root.value);
         front(root.left, data);
         front(root.right, data);
     }
@@ -118,7 +118,7 @@ public class 从中序与后续遍历序列构造二叉树 {
             data = new ArrayList<>();
         }
         mid(root.left, data);
-        data.add(root.val);
+        data.add(root.value);
         mid(root.right, data);
     }
     public static void end(TreeNode root, List<Integer> data) {
@@ -130,6 +130,6 @@ public class 从中序与后续遍历序列构造二叉树 {
         }
         end(root.left, data);
         end(root.right, data);
-        data.add(root.val);
+        data.add(root.value);
     }
 }

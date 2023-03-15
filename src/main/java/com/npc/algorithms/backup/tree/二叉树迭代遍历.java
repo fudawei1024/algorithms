@@ -29,7 +29,7 @@ public class 二叉树迭代遍历 {
         }
 
         ergodic(treeNode.left, datas);
-        datas.add(treeNode.val);
+        datas.add(treeNode.value);
         ergodic(treeNode.right, datas);
     }
 
@@ -56,7 +56,7 @@ public class 二叉树迭代遍历 {
                 st.pop();           // 将空节点弹出
                 node = st.peek();    // 重新取出栈中元素
                 st.pop();
-                result.add(node.val); // 加入到结果集
+                result.add(node.value); // 加入到结果集
             }
         }
         return result;
@@ -85,7 +85,7 @@ public class 二叉树迭代遍历 {
                 stack.pop();
                 TreeNode cnode = stack.peek();
                 stack.pop();
-                result.add(cnode.val);
+                result.add(cnode.value);
             }
         }
         return result;
@@ -115,7 +115,7 @@ public class 二叉树迭代遍历 {
                 stack.pop();
                 TreeNode cnode = stack.peek();
                 stack.pop();
-                result.add(cnode.val);
+                result.add(cnode.value);
             }
         }
         return result;
@@ -146,7 +146,7 @@ public class 二叉树迭代遍历 {
                 stack.pop();
                 TreeNode cnode = stack.peek();
                 stack.pop();
-                result.add(cnode.val);
+                result.add(cnode.value);
             }
         }
         return  result;

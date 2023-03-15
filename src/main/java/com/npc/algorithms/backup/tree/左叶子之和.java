@@ -43,7 +43,7 @@ public class 左叶子之和 {
                 node = stack.peek();    // 重新取出栈中元素
                 stack.pop();
                 if (node.left != null && node.left.left == null && node.left.right == null) {
-                    res += node.left.val;
+                    res += node.left.value;
                 }
             }
        }
@@ -59,7 +59,7 @@ public class 左叶子之和 {
 
         int minValue = 0;
         if (root.left != null && root.left.left == null && root.left.right == null) {
-            minValue = root.left.val;
+            minValue = root.left.value;
         }
         return left + right  + minValue;
     }

@@ -38,8 +38,8 @@ public class 在每个树行中找最大值 {
             int max = 0;
             while (length > 0) {
                 TreeNode node = que.poll();
-                if (max < node.val) {
-                    max = node.val;
+                if (max < node.value) {
+                    max = node.value;
                 }
                 if (node.left != null) {
                     que.offer(node.left);
