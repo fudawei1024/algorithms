@@ -1,10 +1,6 @@
-package com.npc.algorithms.backup.sort;
+package com.npc.algorithms.海外码农算法.数组.sort;
 
 import com.npc.algorithms.util.Util;
-
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Random;
 
 /**
  * @className: QuikSort
