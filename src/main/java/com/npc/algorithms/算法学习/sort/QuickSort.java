@@ -1,4 +1,4 @@
-package com.npc.algorithms.海外码农算法.数组.sort;
+package com.npc.algorithms.算法学习.sort;
 
 import java.util.Arrays;
 import java.util.Random;
