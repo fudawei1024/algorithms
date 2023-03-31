@@ -1,4 +1,4 @@
-package com.npc.algorithms.海外码农算法.数组.sort;
+package com.npc.algorithms.算法学习.sort;
 
 
 import com.npc.algorithms.util.Util;
@@ -8,6 +8,10 @@ public class SelectSort {
         int[] array = new int[]{4, 8, 2, 6, 7, 5, 0, 3, 1};
         sort(array);
         Util.p(array);
+
+        array = null;
+        sort(array);
+        Util.p(array);
     }
 
     public static void sort(int[] arr) {
@@ -15,10 +19,10 @@ public class SelectSort {
             return ;
         }
 
-        for (int i = 1; i < arr.length; i++) {
+        for (int i= 1; i < arr.length; i ++) {
             for (int j = i - 1; j >= 0; j--) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, j, j+ 1);
+                    swap(arr, j, j + 1);
                 }
             }
         }
