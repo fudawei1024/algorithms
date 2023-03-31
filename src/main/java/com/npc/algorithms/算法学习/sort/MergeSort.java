@@ -22,66 +22,30 @@ public class MergeSort {
     }
 
     private static void sort(int[] array, int low, int high, int[] temp) {
-        if (low >= high) {
-            return;
+        if (low < high) {
+            int mid = low + ((high - low) >> 2);
+            sort(array, low, mid, temp);
+            sort(array, mid + 1, high, temp);
+            merge(array, low, mid, high, temp);
         }
-
-        int mid = low + ((high - low) >> 2);
-        sort(array, low, mid, temp);
-        sort(array, mid + 1, high, temp);
-        merge(array, low, mid, high, temp);
     }
 
     private static void merge(int[] array, int low, int mid, int high, int[] temp) {
-       int index = 0;
-       int left = low, right = mid + 1;
-       while (left <= mid && right <= high) {
-           temp[index ++] = array[left] < array[right] ? array[left++] : array[right++];
-       }
-
-       while (left <= mid) {
-           temp[index ++] = array[left ++];
-       }
-
-        while (right <= high) {
-            temp[index ++] = array[right ++];
+        int index = 0, left = low, right = mid + 1;
+        while (left <= mid && right <= high) {
+            temp[index++] = array[left] > array[right] ? array[right++] : array[left ++];
         }
 
-        for (int i = 0; i < index ; i ++) {
-            array[low + i] = temp[i];
-        }
-    }
-
-
-//
-//    public static int[] sort(int[] array,int low,int high, int[] temp ){
-//        int mid = low + ((high - low) >> 1);
-//        if(low < high){
-//            sort(array, low, mid, temp);
-//            sort(array,mid + 1, high, temp);
-//            //左右归并
-//            merge(array, low, mid, high, temp);
-//        }
-//        return array;
-//    }
-//
-    public static void merge2(int[] arr,int low,int mid,int high,int[] tmp){
-        int index = 0;
-        int left = low,right = mid + 1;  //左边序列和右边序列起始索引
-        while(left <= mid && right <= high){
-            tmp[index++] = (arr[left] > arr[right] ? arr[right++] : arr[left++]);
-        }
-        //若左边序列还有剩余，则将其全部拷贝进tmp[]中
         while (left <= mid) {
-            tmp[index++] = arr[left++];
+            temp[index++] = array[left ++];
         }
 
         while (right <= high) {
-            tmp[index++] = arr[right++];
+            temp[index++] = array[right ++];
         }
 
-        for(int t = 0; t < index; t++) {
-            arr[low + t] = tmp[t];
+        for (int i = 0; i < index; i++) {
+            array[low + i] = temp[i];
         }
     }
 }
