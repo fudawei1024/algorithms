@@ -4,6 +4,9 @@ import com.npc.algorithms.backup.link.ListNode;
 import com.npc.algorithms.util.Util;
 import org.junit.Test;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 /**
  *给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
  *示例 1：
@@ -33,8 +36,14 @@ import org.junit.Test;
 public class _1_A_移除链表元素 {
 
 
+    public static void main(String[] args) {
+        System.out.println("EXZOIO@gomail.love".equals("EXZOIO@gomail.love"));
+    }
+
     @Test
     public void test() {
+
+
         int[] nums = {1,2,6,3,4,5,6};
         ListNode head = Util.array2List(nums);
         Util.pV(head);
