@@ -1,9 +1,6 @@
-package com.npc.algorithms.算法学习.sort;
+package com.npc.algorithms.算法练习.排序;
 
 import com.npc.algorithms.util.Util;
-
-import java.util.Arrays;
-import java.util.Random;
 
 /**
  * @className: QuikSort

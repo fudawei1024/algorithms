@@ -1,23 +1,28 @@
-package com.npc.algorithms.算法学习.sort;
+package com.npc.algorithms.算法练习.排序;
+
 
 import com.npc.algorithms.util.Util;
 
-public class BubbleSort {
+public class SelectSort {
     public static void main(String[] args) {
-        int[] array = new int[]{4, 8, 2,6, 7, 5, 0, 3, 1};
+        int[] array = new int[]{4, 8, 2, 6, 7, 5, 0, 3, 1};
+        sort(array);
+        Util.p(array);
+
+        array = null;
         sort(array);
         Util.p(array);
     }
 
-
-
     public static void sort(int[] arr) {
-        if (arr == null || arr.length == 0) return;
+        if (arr == null || arr.length <= 0) {
+            return ;
+        }
 
-        for (int i = arr.length - 1 ; i > 0; i --) {
-            for (int j = 0; j < i; j++) {
+        for (int i= 1; i < arr.length; i ++) {
+            for (int j = i - 1; j >= 0; j--) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, j , j+1);
+                    swap(arr, j, j + 1);
                 }
             }
         }
