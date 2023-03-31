@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class SkipList<K extends Comparable<K>, V> {
 
+
     public static class SkipNode <K extends Comparable<K>, V> {
 
         public K key;

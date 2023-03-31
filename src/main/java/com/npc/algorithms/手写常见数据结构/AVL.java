@@ -201,15 +201,4 @@ public class AVL<K extends Comparable, V>  implements SortTable<K, V> {
         root = null;
         size = 0;
     }
-
-
-    public static void main(String[] args) {
-        AVL<Integer, Integer> avl = new AVL<>();
-
-        for (int i = 0; i < 15; i++) {
-            avl.put( i + 1, i + 1);
-        }
-
-        new TreeShow(avl.root).print();
-    }
 }
